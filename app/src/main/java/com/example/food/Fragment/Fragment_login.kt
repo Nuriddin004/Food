@@ -36,6 +36,10 @@ private val binding by lazy { FragmentLoginBinding.inflate(layoutInflater) }
                 dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
                 dialog.show()
             }
+        binding.registerButton.setOnClickListener{
+
+
+        }
 
         return binding.root
     }

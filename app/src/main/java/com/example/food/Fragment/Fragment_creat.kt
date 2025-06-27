@@ -18,7 +18,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [Fragment_creat.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Fragment_creat : Fragment() {
+class Fragment_creat : androidx.fragment.app.Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
