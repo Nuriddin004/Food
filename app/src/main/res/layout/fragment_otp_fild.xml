@@ -104,11 +104,15 @@
             android:layout_marginBottom="24dp">
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Didn't receive code?"
                 android:textColor="#888888"
                 android:textSize="14sp" />
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/txt_resend"
                 android:text=" Resend"
                 android:textColor="#FF9800"
@@ -128,9 +132,13 @@
                 android:layout_width="89dp"
                 android:layout_height="20dp"
                 android:layout_marginEnd="8dp"
-                android:src="@drawable/ic_timer_gray" />
+                />
+<!--                android:src="@drawable/ic_timer_gray"-->
+
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/txt_timer"
                 android:text="09.00"
                 android:textColor="#888888"
