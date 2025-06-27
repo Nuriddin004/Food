@@ -40,7 +40,7 @@ android {
 
 dependencies {
 
-
+    implementation("com.tbuonomo:dotsindicator:4.3")
     // Navigation Component
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.7")

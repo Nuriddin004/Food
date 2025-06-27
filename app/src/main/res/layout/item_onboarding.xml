@@ -54,12 +54,16 @@
                 android:text="All the best restaurants with their top \nmenu waiting for you, they cant’t wait \nfor your order!!"
                 android:textColor="@color/white" />
 
-            <ImageView
-                android:id="@+id/indicatorImage"
-                android:layout_width="match_parent"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_inner"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/indicator" />
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                app:tabIndicatorHeight="0dp"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabBackground="@android:color/transparent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
