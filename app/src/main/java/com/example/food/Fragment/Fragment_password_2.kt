@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.core.content.ContextCompat
 import com.example.food.R
 
 class Fragment_password_2 : Fragment() {
@@ -23,7 +22,7 @@ class Fragment_password_2 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_password_2, container, false)
+        val view = inflater.inflate(R.layout.dialog, container, false)
 
         // Elementlarni aniqlash
         cardWhatsapp = view.findViewById(R.id.card_whatsapp)
