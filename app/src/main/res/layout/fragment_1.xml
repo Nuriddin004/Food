@@ -1,36 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/f1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/onbording_1"
     android:orientation="vertical">
-<androidx.viewpager2.widget.ViewPager2
-    android:layout_width="match_parent"
-    android:id="@+id/fragment_viewpager"
-    android:layout_height="match_parent"
-    />
-<!--    <com.google.android.material.tabs.TabLayout-->
-<!--        android:id="@+id/tab_layout"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        app:tabIndicatorHeight="0dp"-->
-<!--        android:background="@android:color/transparent"-->
 
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.83"-->
-<!--        app:tabRippleColor="@android:color/transparent"/>-->
-<!--&lt;!&ndash;    <com.google.android.material.tabs.TabLayout&ndash;&gt;-->
-<!--&lt;!&ndash;        android:id="@+id/tab_layout"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_gravity="center"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:tabIndicatorHeight="0dp"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:tabRippleColor="@android:color/transparent"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:tabBackground="@android:color/transparent"/>&ndash;&gt;-->
+    <!-- ID qo‘shildi -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_margin="32dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="#FE8C00"
+        app:cardCornerRadius="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/fragment_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.55"
+                app:tabBackground="@android:color/transparent"
+                app:tabIconTint="@null"
+                app:tabIndicatorHeight="0dp"
+                app:tabRippleColor="@android:color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <!-- ID qo‘shildi -->
+                <TextView
+                    android:id="@+id/skipText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skip"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8" />
+
+                <TextView
+                    android:id="@+id/nextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next ->"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:contentDescription="Add"
+                android:src="@drawable/icon2"
+                app:backgroundTint="@color/white"
+                app:fabSize="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintVertical_bias="0.85" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
