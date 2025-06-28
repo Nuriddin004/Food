@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.food.R
+import com.example.food.databinding.DialogBinding
+import com.example.food.databinding.FragmentPasswordBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,6 +22,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class Fragment_password : Fragment() {
+    private val binding by lazy { FragmentPasswordBinding.inflate(layoutInflater) }
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,8 +39,45 @@ class Fragment_password : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding.continueButton.setOnClickListener {
+            var check=0
+
+            val dialog = BottomSheetDialog(requireContext())
+            val  dilal=DialogBinding.inflate(layoutInflater)
+            dilal.cardWhatsapp.setOnClickListener {
+                check=1
+                dilal.checkWhatsapp.visibility = View.VISIBLE
+                dilal.checkEmail.visibility = View.GONE
+                dilal.cardWhatsapp.setBackgroundResource(R.drawable.bg_selected_option)
+                dilal.cardEmail.setBackgroundResource(R.drawable.bg_unselected)
+
+
+            }
+
+            dilal.cardEmail.setOnClickListener {
+                check=0
+                dilal.checkWhatsapp.visibility = View.GONE
+                dilal.checkEmail.visibility = View.VISIBLE
+                dilal.cardEmail.setBackgroundResource(R.drawable.bg_selected_option)
+                dilal.cardWhatsapp.setBackgroundResource(R.drawable.bg_unselected)
+            }
+
+            dialog.setContentView(dilal.root)
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            dialog.show()
+            dilal.btnContinue.setOnClickListener {
+                dialog.cancel()
+                when(check){
+                    0-> findNavController().navigate(R.id.otp_fild2)
+                    1-> findNavController().navigate(R.id.fragment_creat)
+                }
+            }
+
+
+
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_password, container, false)
+        return binding.root
     }
 
     companion object {
