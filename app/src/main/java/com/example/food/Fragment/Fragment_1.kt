@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.food.R
@@ -84,6 +85,9 @@ private val binding by lazy { Fragment1Binding.inflate(layoutInflater) }
             if (nextPage < list.size) {
                 binding.fragmentViewpager.currentItem = nextPage
             }
+        }
+        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.action_fragment_13_to_fragment_login4)
         }
 
         return binding.root

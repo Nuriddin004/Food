@@ -10,9 +10,12 @@
     <ImageView
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:src="@drawable/ic_burger" />
+        android:src="@drawable/burger" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
         android:text="Burger"
         android:textSize="14sp"
         android:textColor="@android:color/black" />

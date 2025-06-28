@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.food.R
 import com.example.food.databinding.DialogBinding
 import com.example.food.databinding.FragmentLoginBinding
@@ -37,7 +38,12 @@ private val binding by lazy { FragmentLoginBinding.inflate(layoutInflater) }
                 dialog.show()
             }
         binding.registerButton.setOnClickListener{
+            findNavController().navigate(R.id.action_fragment_login4_to_fragment_creat)
 
+
+        }
+        binding.signbutton.setOnClickListener {
+            findNavController().navigate(R.id.action_fragment_login4_to_homev1Fragment)
 
         }
 

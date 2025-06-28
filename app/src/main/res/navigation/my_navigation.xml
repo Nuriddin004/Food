@@ -25,12 +25,17 @@
         <action
             android:id="@+id/action_fragment_login4_to_fragment_creat"
             app:destination="@id/fragment_creat" />
+        <action
+            android:id="@+id/action_fragment_login4_to_homev1Fragment"
+            app:destination="@id/homev1Fragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_password3"
         android:name="com.example.food.Fragment.Fragment_password"
         android:label="fragment_password"
-        tools:layout="@layout/fragment_password" />
+        tools:layout="@layout/fragment_password" >
+
+    </fragment>
     <fragment
         android:id="@+id/otp_fild2"
         android:name="com.example.food.Fragment.Otp_fild"
@@ -39,5 +44,14 @@
         android:id="@+id/fragment_creat"
         android:name="com.example.food.Fragment.Fragment_creat"
         android:label="fragment_creat"
-        tools:layout="@layout/fragment_creat" />
+        tools:layout="@layout/fragment_creat" >
+
+        <action
+            android:id="@+id/action_fragment_creat_to_fragment_login4"
+            app:destination="@id/fragment_login4" />
+    </fragment>
+    <fragment
+        android:id="@+id/homev1Fragment"
+        android:name="com.example.food.Fragment.Homev1Fragment"
+        android:label="Homev1Fragment" />
 </navigation>
